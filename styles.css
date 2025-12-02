@@ -1,5 +1,32 @@
+/* CSS BY Alexcia Edwards Vanguard site styles*/
+
+/* IMPORTED FONTS */
+
+/* CSS REST */
+/* (global helpers and resets are below) */
+
+/* ROOT VARIABLES */
+:root{
+--color-bg: #0d0d0d;
+--color-panel: #000000;
+--color-blue: #007BFF;
+--color-light: #ffffff;
+--color-muted: #cccccc;
+--color-card-text: #e0e0e0;
+--radius-lg: 12px;
+--radius-md: 6px;
+--container-max: 1100px;
+--gap-sm: 10px;
+--gap-md: 20px;
+--gap-lg: 40px;
+--bp-xl: 1200px;
+--bp-lg: 900px;
+--bp-md: 600px;
+--bp-sm: 400px;
+}
+
 /* ------------------------------
-   GLOBAL STYLES
+GLOBAL STYLES
 ------------------------------ */
 * {
     margin: 0;
@@ -94,23 +121,11 @@ body {
 .nav-links.show {
     display: flex;
 }
-
+/* MEDIA QUERY MEDIUM */
+/* MEDIA QUERY LARGE */
 /* Desktop view */
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex !important;
-        position: static;
-        flex-direction: row;
-        background: none;
-        padding: 0;
-        gap: 2rem;
-        box-shadow: none;
-    }
-
-    .menu-btn {
-        display: none;
-    }
-}
+@media (min-width: 800px) { }
+@media (min-width: 1024px) { }
 
 /* MENU BUTTON */
 .menu-btn {
@@ -137,7 +152,7 @@ body {
 }
 
 /* ------------------------------
-   HERO SECTION
+HERO SECTION
 ------------------------------ */
 .hero {
     background-image: url("images/vanguard-hero.jpg");
@@ -203,24 +218,24 @@ body {
 
 /* Hover effect */
 .hero-btn:hover {
-    background-color: red;
+    background-color: #d13908;
     color: #ffffff;
-    box-shadow: 0 0 15px red;
+    box-shadow: 0 0 15px #d13908;
     transform: scale(1.05);
 }
 
-/* Active / pressed effect: entire button turns red */
+/* Active */
 .hero-btn:active {
-    background-color: red;
+    background-color: #d13908;
     color: #ffffff;
-    box-shadow: 0 0 15px red;
+    box-shadow: 0 0 15px #d13908;
     transform: scale(1.05);
     transition: all 0.1s ease-in-out;
 }
 
 /* Glow class for JS */
 .hero-btn.glow-red {
-    box-shadow: 0 0 20px 4px red;
+    box-shadow: 0 0 20px 4px #d13908;
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
 }
@@ -238,6 +253,19 @@ body {
     margin-bottom: 25px;
     color: #cccccc;
 }
+
+.section-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 3s ease-out;
+}
+
+.section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease-out, transform 3s ease-out;
+}
+
 
 /* ------------------------------
    SERVICES / WHAT WE OFFER SECTIONS
@@ -321,7 +349,7 @@ body {
 }
 
 /* -------------------------
-   RESULTS SECTION
+RESULTS SECTION
 ------------------------- */
 .results-section {
     background: #007bff;
@@ -397,6 +425,7 @@ body {
     background: #333;
     border-radius: 8px;
     position: relative;
+    transition: height 3s ease-out;
     height: var(--height);
 }
 
@@ -474,19 +503,19 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-/* Hover effect: entire button turns red with glow */
+/* Hover effect */
 .contact-form button:hover {
-    background-color: red;
+    background-color: #d13908;
     color: #ffffff;
-    box-shadow: 0 0 20px red;
+    box-shadow: 0 0 20px #d13908;
     transform: scale(1.05);
 }
 
-/* Active / pressed effect: stays red while pressed */
+/* Active */
 .contact-form button:active {
-    background-color: red;
+    background-color: #d13908;
     color: #ffffff;
-    box-shadow: 0 0 25px red;
+    box-shadow: 0 0 25px ;
     transform: scale(1.05);
     transition: all 0.1s ease-in-out;
 }

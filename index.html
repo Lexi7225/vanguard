@@ -12,11 +12,12 @@
 <body>
 
     <header class="top-bar">
-        <div class="container top-bar-inner">
-            <div class="branding">
-                <img src="images/vanguard-logo.svg" alt="Vanguard Logo" class="brand-icon">
-                <span class="brand-name">Vanguard</span>
-            </div>
+        <article class="container top-bar-inner">
+            <article class="branding">
+    <img src="images/vanguard-logo.svg" alt="Vanguard Logo" class="brand-icon">
+    <span class="brand-name">Vanguard</span>
+</article>
+
 
             <nav class="nav-links">
                 <a href="#about">ABOUT</a>
@@ -30,79 +31,79 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-        </div>
+        </article>
     </header>
 
     <section class="hero">
-        <div class="container hero-content">
+        <article class="container hero-content">
             <h2 class="hero-title">Innovation &amp; Investment</h2>
             <p class="hero-subtitle">
                 We empower businesses to lead the future with high-impact strategies,  
                 market intelligence, and financial solutions that drive success.
             </p>
             <a class="hero-btn" href="#contact">Request a Consultation</a>
-        </div>
+        </article>
     </section>
 
     <section id="about" class="expertise-section">
-        <div class="container">
+        <article class="container">
             <h2>Our Expertise. Your Edge.</h2>
             <p class="section-desc">
                 We redefine success by leveraging AI-driven analytics, market intelligence, and  
                 high-yield investment strategies to propel businesses forward. Whether you're  
                 looking to scale, optimize, or dominate, our strategic expertise delivers results.
             </p>
-        </div>
+        </article>
     </section>
 
     <section id="services" class="services-section">
-        <div class="container">
+        <article class="container">
             <h2>What We Offer</h2>
 
-            <div class="services-grid">
-                <div class="service-card">
+            <article class="services-grid">
+                <article class="service-card">
                     <h3>Strategic Growth Consulting</h3>
                     <p>Unlock new revenue streams and optimize market expansion strategies.</p>
-                </div>
+                </article>
 
-                <div class="service-card">
+                <article class="service-card">
                     <h3>High-Impact Investment Solutions</h3>
                     <p>Maximize returns with data-driven portfolio management.</p>
-                </div>
+                </article>
 
-                <div class="service-card">
+                <article class="service-card">
                     <h3>Business Acceleration &amp; Mergers</h3>
                     <p>Identify opportunities for rapid growth and high-value acquisitions.</p>
-                </div>
+                </article>
 
-                <div class="service-card">
+                <article class="service-card">
                     <h3>Digital Transformation</h3>
                     <p>Stay at the forefront with AI, blockchain, and automation.</p>
-                </div>
+                </article>
 
-                <div class="service-card">
+                <article class="service-card">
                     <h3>Exclusive Executive Advisory Services</h3>
                     <p>Leadership support for C-suite executives and investors.</p>
-                </div>
+                </article>
 
-                <div class="service-card">
+                <article class="service-card">
                     <h3>Corporate Innovation</h3>
                     <p>Implement new ideas and technologies to enhance growth.</p>
-                </div>
-            </div>
-        </div>
+                </article>
+            </article>
+        </article>
     </section>
 
     <section class="results-section">
-        <div class="container">
+        <article class="container">
             <h2>Proven Results</h2>
             <p class="section-desc">
                 Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.
             </p>
 
-            <div class="results-layout">
+            <article class="results-layout">
 
-                <div>
+                <article>
                     <h3>Profits</h3>
 
                     <table class="results-table">
@@ -137,9 +138,9 @@
                             <td>100%</td>
                         </tr>
                     </table>
-                </div>
+                </article>
 
-                <div>
+                <article>
                     <h3>Growth</h3>
 
                     <div id="bar-chart">
@@ -156,7 +157,7 @@
     </section>
 
     <section id="contact" class="contact-section">
-        <div class="container">
+        <article class="container">
             <h2>Contact Us</h2>
             <p class="section-desc">Want to take your business to the next level? Get in touch with our elite team today.</p>
 
@@ -168,15 +169,15 @@
                 <textarea placeholder="How can we help you?" required></textarea>
                 <button type="submit">Submit</button>
             </form>
-        </div>
+        </article>
     </section>
 
     <footer class="site-footer">
-        <div class="container">
+        <article class="container">
             <p>© 2025 Vanguard. All rights reserved.</p>
             <p>Email: <a href="mailto:info@vanguard.com">info@vanguard.com</a></p>
             <p>Phone: 480.123.4567</p>
-        </div>
+        </article>
     </footer>
 
 <script>
@@ -199,6 +200,39 @@ document.addEventListener("DOMContentLoaded", function() {
         navLinks.classList.toggle('show');
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const bars = document.querySelectorAll("#bar-chart .bar");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.height = entry.target.style.getPropertyValue("--height");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    bars.forEach(bar => {
+        bar.style.height = "0";
+        observer.observe(bar);
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+
+    const animatedItems = document.querySelectorAll(".section-title, .section-desc");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.4 });
+
+    animatedItems.forEach(item => observer.observe(item));
+
+});
+
 </script>
 
 </body>
