@@ -2,101 +2,204 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!-- ADD META TAG REQUIRED TO MAKE PAGE RESPONSIVE-->
-    <meta name="description" content="Vaanguard- Leading the Future of Success. Premier strategic investment and business acceleration firm for high-growth enterprises.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vaanguard - Leading the Future of Success. Premier strategic investment and business acceleration firm for high-growth enterprises.">
     <meta name="keywords" content="business growth, strategic investment, mergers, corporate consulting, digital transformation">
-<!-- ADD META TAG FOR AUTHOR AND YOUR NAME-->
+    <meta name="author" content="YOUR NAME">
     <title>Vanguard | Leading the Future of Success</title>
-<!-- ADD LINK TO YOUR CSS-->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<!-- WRAP CONTENT IN VALIDATED, SEMANTIC HTML5 (SEE HINTS FOLDER LINKED TO IN THE CANVAS INSTRUCTIONS)-->
-    Vaanguard
-        Main Navigation
-            About
-            Services
-            Contact
 
-        Innovation & Investment
-        We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.
-        Request a Consultation
+    <header class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="branding">
+                <img src="images/vanguard-logo.svg" alt="Vanguard Logo" class="brand-icon">
+                <span class="brand-name">Vanguard</span>
+            </div>
 
-        Our Expertise. Your Edge.
-        We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'
+            <nav class="nav-links">
+                <a href="#about">ABOUT</a>
+                <a href="#services">SERVICES</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
 
-        What We Offer
-            Strategic Growth Consulting
-            Unlock new revenue streams and optimize market expansion strategies.
+            <button class="menu-btn" aria-label="Open menu">
+                <span class="visually-hidden">Open menu</span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
 
-            High-Impact Investment Solutions
-            Maximize returns with data-driven portfolio management.
+    <section class="hero">
+        <div class="container hero-content">
+            <h2 class="hero-title">Innovation &amp; Investment</h2>
+            <p class="hero-subtitle">
+                We empower businesses to lead the future with high-impact strategies,  
+                market intelligence, and financial solutions that drive success.
+            </p>
+            <a class="hero-btn" href="#contact">Request a Consultation</a>
+        </div>
+    </section>
 
-            Business Acceleration & Mergers
-            Identify opportunities for rapid growth and high-value acquisitions.
+    <section id="about" class="expertise-section">
+        <div class="container">
+            <h2>Our Expertise. Your Edge.</h2>
+            <p class="section-desc">
+                We redefine success by leveraging AI-driven analytics, market intelligence, and  
+                high-yield investment strategies to propel businesses forward. Whether you're  
+                looking to scale, optimize, or dominate, our strategic expertise delivers results.
+            </p>
+        </div>
+    </section>
 
-            Digital Transformation
-            Stay at the forefront of industry advancements with AI, blockchain, and automation.
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>What We Offer</h2>
 
-            Exclusive Executive Advisory Services
-            Personalized insights and leadership support for C-suite executives and high-net-worth investors.
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Strategic Growth Consulting</h3>
+                    <p>Unlock new revenue streams and optimize market expansion strategies.</p>
+                </div>
 
-            Corporate Innovation
-            Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.
+                <div class="service-card">
+                    <h3>High-Impact Investment Solutions</h3>
+                    <p>Maximize returns with data-driven portfolio management.</p>
+                </div>
 
-            Proven Results
-            Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.
+                <div class="service-card">
+                    <h3>Business Acceleration &amp; Mergers</h3>
+                    <p>Identify opportunities for rapid growth and high-value acquisitions.</p>
+                </div>
 
-                Profits
-                Year
-                Revenue ($M)
-                Growth (%)
+                <div class="service-card">
+                    <h3>Digital Transformation</h3>
+                    <p>Stay at the forefront with AI, blockchain, and automation.</p>
+                </div>
 
-                2020
-                $120M
-                30%
+                <div class="service-card">
+                    <h3>Exclusive Executive Advisory Services</h3>
+                    <p>Leadership support for C-suite executives and investors.</p>
+                </div>
 
-                2021
-                $180M
-                50%
+                <div class="service-card">
+                    <h3>Corporate Innovation</h3>
+                    <p>Implement new ideas and technologies to enhance growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                2022
-                $250M
-                70%
+    <section class="results-section">
+        <div class="container">
+            <h2>Proven Results</h2>
+            <p class="section-desc">
+                Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.
+            </p>
 
-                2023
-                $340M
-                85%
+            <div class="results-layout">
 
-                2024
-                $420M
-                100%
+                <div>
+                    <h3>Profits</h3>
 
-                Growth
-<!-- CODE PROVIDED FOR YOU, NOTHING TO DO FOR THE BAR CHART IN THE HTML-->
-                    <div  id="bar-chart">
+                    <table class="results-table">
+                        <tr>
+                            <th>Year</th>
+                            <th>Revenue ($M)</th>
+                            <th>Growth (%)</th>
+                        </tr>
+                        <tr>
+                            <td>2020</td>
+                            <td>$120M</td>
+                            <td>30%</td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td>$180M</td>
+                            <td>50%</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>$250M</td>
+                            <td>70%</td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td>$340M</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td>2024</td>
+                            <td>$420M</td>
+                            <td>100%</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div>
+                    <h3>Growth</h3>
+
+                    <div id="bar-chart">
                         <div class="bar" data-year="2020" style="--height: 30%;"></div>
                         <div class="bar" data-year="2021" style="--height: 50%;"></div>
                         <div class="bar" data-year="2022" style="--height: 70%;"></div>
                         <div class="bar" data-year="2023" style="--height: 85%;"></div>
                         <div class="bar" data-year="2024" style="--height: 100%;"></div>
                     </div>
+                </div>
 
-        Contact Us
-        Want to take your business to the next level? Get in touch with our elite team today.
+            </div>
+        </div>
+    </section>
 
-            Full Name
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="section-desc">Want to take your business to the next level? Get in touch with our elite team today.</p>
 
-            Email Address
+            <form class="contact-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Company Name">
+                <input type="text" placeholder="Industry">
+                <textarea placeholder="How can we help you?" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
 
-            Company Name
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Vanguard. All rights reserved.</p>
+            <p>Email: <a href="mailto:info@vanguard.com">info@vanguard.com</a></p>
+            <p>Phone: 480.123.4567</p>
+        </div>
+    </footer>
 
-            Industry
+<script>
+const consultationBtn = document.querySelector('.hero-btn');
 
-            How can we help you?
+consultationBtn.addEventListener('click', function() {
+    consultationBtn.classList.add('glow-red');
+    setTimeout(() => {
+        consultationBtn.classList.remove('glow-red');
+    }, 500);
+});
+</script>
 
-            Submit
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
 
-        For educational purposes only. 
-        Email: info@vaanguard.com 
-        Phone: 480.123.4567
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+});
+</script>
+
+</body>
+</html>
